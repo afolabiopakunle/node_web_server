@@ -24,6 +24,7 @@ app.use((req, res, next) => {
     // res.render('maintenance.hbs')
     next();
 })
+
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home',
@@ -34,6 +35,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Us',
+    })
+})
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
     })
 })
 
